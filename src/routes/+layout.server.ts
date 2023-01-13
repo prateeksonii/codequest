@@ -5,7 +5,7 @@ export const load: LayoutServerLoad = async (event) => {
 	const session = await event.locals.getSession();
 
 	if (session !== null) {
-		if (event.route.id !== '/dashboard') throw redirect(301, '/dashboard');
+		if (!event.route.id?.startsWith('/dashboard')) throw redirect(301, '/dashboard');
 	}
 
 	return {
