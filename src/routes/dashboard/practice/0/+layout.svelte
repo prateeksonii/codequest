@@ -6,4 +6,9 @@
 	<title>{meta['./+page.svx'].title}</title>
 </svelte:head>
 
-<slot />
+<div class="grid w-full grid-cols-2">
+	<article class="w-full">
+		<slot />
+	</article>
+	<div>ok</div>
+</div>
