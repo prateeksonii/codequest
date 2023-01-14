@@ -12,13 +12,8 @@
 	} else {
 		sidebarItems = data.sidebarMenu.practice.items;
 	}
-
-	export let title = '';
 </script>
 
-<svelte:head>
-	<title>{title}</title>
-</svelte:head>
 <Nav />
 <main class="grid grid-cols-[1fr_4fr] gap-8">
 	<Sidebar items={sidebarItems} />
