@@ -7,12 +7,12 @@ const config = {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['SUIT Variable', ...fontFamily.sans]
+				sans: ['Inter', ...fontFamily.sans]
 			}
 		}
 	},
 
-	plugins: []
+	plugins: [require('@tailwindcss/typography')]
 };
 
 module.exports = config;

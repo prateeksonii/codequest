@@ -6,7 +6,11 @@ export const load: Load = () => {
 			items: [
 				{
 					label: 'Getting Started',
-					url: '/dashboard/getting-started'
+					url: '/dashboard/learn/getting-started'
+				},
+				{
+					label: 'Roadmap',
+					url: '/dashboard/learn/roadmap'
 				}
 			]
 		}
