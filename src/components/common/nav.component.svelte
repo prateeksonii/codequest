@@ -1,7 +1,0 @@
-<nav class="flex h-16 items-center justify-between gap-16 bg-gray-900 px-8 shadow-sm">
-	<a href="/" class="text-xl font-extrabold">CodeQuest</a>
-	<ul class="flex flex-1 items-center gap-8 text-lg font-medium">
-		<li><a href="/dashboard/learn">Learn</a></li>
-		<li><a href="/dashboard/practice">Practice</a></li>
-	</ul>
-</nav>
