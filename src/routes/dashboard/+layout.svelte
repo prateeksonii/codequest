@@ -15,10 +15,10 @@
 </script>
 
 <Nav />
-<main class="grid w-full grid-cols-[30%_70%] gap-8">
+<main class="grid w-full grid-cols-[20%_80%]">
 	<Sidebar items={sidebarItems} />
 
-	<section class="prose prose-invert max-w-full p-8">
+	<section class="prose prose-invert max-w-full">
 		<slot />
 	</section>
 </main>

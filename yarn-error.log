@@ -1,5 +1,5 @@
 Arguments: 
-  /home/whitecoal/.volta/tools/image/node/18.12.1/bin/node /home/whitecoal/.volta/tools/image/yarn/1.22.19/bin/yarn.js add -D @tailwind/typography
+  /home/whitecoal/.volta/tools/image/node/18.12.1/bin/node /home/whitecoal/.volta/tools/image/yarn/1.22.19/bin/yarn.js add -D @types/ace-builds
 
 PATH: 
   /home/whitecoal/.volta/tools/image/npm/9.2.0/bin:/home/whitecoal/.volta/tools/image/yarn/1.22.19/bin:/home/whitecoal/.volta/tools/image/node/18.12.1/bin:/home/whitecoal/.bun/bin:/home/whitecoal/.volta/bin:/home/whitecoal/.deno/bin:/usr/local/go/bin:/home/whitecoal/.vscode-server/bin/e8a3071ea4344d9d48ef8a4df2c097372b0c5161/bin/remote-cli:/home/whitecoal/.bun/bin:/home/whitecoal/.volta/bin:/home/whitecoal/.deno/bin:/usr/local/go/bin:/home/whitecoal/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Volta/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/Microsoft VS Code/bin:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/dotnet/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Users/prate/go/bin:/mnt/c/Users/prate/scoop/apps/gcc/current/bin:/mnt/c/Users/prate/AppData/Local/Volta/bin:/mnt/c/Users/prate/scoop/shims:/mnt/c/Users/prate/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/prate/AppData/Local/JetBrains/Toolbox/scripts:/mnt/c/Users/prate/AppData/Local/Android/Sdk:/mnt/c/Users/prate/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/prate/.dotnet/tools:/mnt/c/Windows/Microsoft.NET/Framework64/v4.0.30319:/mnt/c/Users/prate/.dotnet/tools:/home/whitecoal/go/bin:/home/whitecoal/go/bin
@@ -14,7 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@tailwind%2ftypography: Not found
+  Error: https://registry.yarnpkg.com/@types%2face-builds: Not found
       at params.callback [as _callback] (/home/whitecoal/.volta/tools/image/yarn/1.22.19/lib/cli.js:66145:18)
       at self.callback (/home/whitecoal/.volta/tools/image/yarn/1.22.19/lib/cli.js:140890:22)
       at Request.emit (node:events:513:28)
@@ -43,12 +43,14 @@ npm manifest:
   	"devDependencies": {
   		"@sveltejs/adapter-auto": "^1.0.0",
   		"@sveltejs/kit": "^1.0.0",
+  		"@tailwindcss/typography": "^0.5.9",
   		"@typescript-eslint/eslint-plugin": "^5.45.0",
   		"@typescript-eslint/parser": "^5.45.0",
   		"autoprefixer": "^10.4.7",
   		"eslint": "^8.28.0",
   		"eslint-config-prettier": "^8.5.0",
   		"eslint-plugin-svelte3": "^4.0.0",
+  		"mdsvex": "^0.10.6",
   		"postcss": "^8.4.14",
   		"postcss-load-config": "^4.0.1",
   		"prettier": "^2.8.0",
@@ -60,13 +62,14 @@ npm manifest:
   		"tailwindcss": "^3.1.5",
   		"tslib": "^2.4.1",
   		"typescript": "^4.9.3",
-  		"vite": "^4.0.0",
-  		"mdsvex": "^0.10.6"
+  		"vite": "^4.0.0"
   	},
   	"type": "module",
   	"dependencies": {
   		"@auth/core": "^0.2.5",
-  		"@auth/sveltekit": "^0.1.12"
+  		"@auth/sveltekit": "^0.1.12",
+  		"ace-builds": "^1.14.0",
+  		"monaco-editor": "^0.34.1"
   	}
   }
 
@@ -328,6 +331,16 @@ Lockfile:
       svelte-hmr "^0.15.1"
       vitefu "^0.2.3"
   
+  "@tailwindcss/typography@^0.5.9":
+    version "0.5.9"
+    resolved "https://registry.yarnpkg.com/@tailwindcss/typography/-/typography-0.5.9.tgz#027e4b0674929daaf7c921c900beee80dbad93e8"
+    integrity sha512-t8Sg3DyynFysV9f4JDOVISGsjazNb48AeIYQwcL+Bsq5uf4RYL75C1giZ43KISjeDGBaTN3Kxh7Xj/vRSMJUUg==
+    dependencies:
+      lodash.castarray "^4.4.0"
+      lodash.isplainobject "^4.0.6"
+      lodash.merge "^4.6.2"
+      postcss-selector-parser "6.0.10"
+  
   "@types/cookie@^0.5.1":
     version "0.5.1"
     resolved "https://registry.yarnpkg.com/@types/cookie/-/cookie-0.5.1.tgz#b29aa1f91a59f35e29ff8f7cb24faf1a3a750554"
@@ -447,6 +460,11 @@ Lockfile:
     dependencies:
       "@typescript-eslint/types" "5.48.1"
       eslint-visitor-keys "^3.3.0"
+  
+  ace-builds@^1.14.0:
+    version "1.14.0"
+    resolved "https://registry.yarnpkg.com/ace-builds/-/ace-builds-1.14.0.tgz#85a6733b4fa17b0abc3dbfe38cd8d823cad79716"
+    integrity sha512-3q8LvawomApRCt4cC0OzxVjDsZ609lDbm8l0Xl9uqG06dKEq4RT0YXLUyk7J2SxmqIp5YXzZNw767Dr8GKUruw==
   
   acorn-jsx@^5.3.2:
     version "5.3.2"
@@ -1193,6 +1211,16 @@ Lockfile:
     dependencies:
       p-locate "^5.0.0"
   
+  lodash.castarray@^4.4.0:
+    version "4.4.0"
+    resolved "https://registry.yarnpkg.com/lodash.castarray/-/lodash.castarray-4.4.0.tgz#c02513515e309daddd4c24c60cfddcf5976d9115"
+    integrity sha512-aVx8ztPv7/2ULbArGJ2Y42bG1mEQ5mGjpdvrbJcJFU3TbYybe+QlLS4pst9zV52ymy2in1KpFPiZnAOATxD4+Q==
+  
+  lodash.isplainobject@^4.0.6:
+    version "4.0.6"
+    resolved "https://registry.yarnpkg.com/lodash.isplainobject/-/lodash.isplainobject-4.0.6.tgz#7c526a52d89b45c45cc690b88163be0497f550cb"
+    integrity sha512-oSXzaWypCMHkPC3NvBEaPHf0KsA5mvPrOPgQWDsbg8n7orZ290M0BmC/jgRZ4vcJ6DTAhjrsSYgdsW/F+MFOBA==
+  
   lodash.merge@^4.6.2:
     version "4.6.2"
     resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.2.tgz#558aa53b43b661e1925a0afdfa36a9a1085fe57a"
@@ -1270,6 +1298,11 @@ Lockfile:
     integrity sha512-FP+p8RB8OWpF3YZBCrP5gtADmtXApB5AMLn+vdyA+PyxCjrCs00mjyUozssO33cwDeT3wNGdLxJ5M//YqtHAJw==
     dependencies:
       minimist "^1.2.6"
+  
+  monaco-editor@^0.34.1:
+    version "0.34.1"
+    resolved "https://registry.yarnpkg.com/monaco-editor/-/monaco-editor-0.34.1.tgz#1b75c4ad6bc4c1f9da656d740d98e0b850a22f87"
+    integrity sha512-FKc80TyiMaruhJKKPz5SpJPIjL+dflGvz4CpuThaPMc94AyN7SeC9HQ8hrvaxX7EyHdJcUY5i4D0gNyJj1vSZQ==
   
   mri@^1.1.0:
     version "1.2.0"
@@ -1444,6 +1477,14 @@ Lockfile:
     integrity sha512-0DkamqrPcmkBDsLn+vQDIrtkSbNkv5AD/M322ySo9kqFkCIYklym2xEmWkwo+Y3/qZo34tzEPNUw4y7yMCdv5w==
     dependencies:
       postcss-selector-parser "^6.0.10"
+  
+  postcss-selector-parser@6.0.10:
+    version "6.0.10"
+    resolved "https://registry.yarnpkg.com/postcss-selector-parser/-/postcss-selector-parser-6.0.10.tgz#79b61e2c0d1bfc2602d549e11d0876256f8df88d"
+    integrity sha512-IQ7TZdoaqbT+LCpShg46jnZVlhWD2w6iQYAcYXfHARZ7X1t/UGhhceQDs5X0cGqKvYlHNOuv7Oa1xmb0oQuA3w==
+    dependencies:
+      cssesc "^3.0.0"
+      util-deprecate "^1.0.2"
   
   postcss-selector-parser@^6.0.10:
     version "6.0.11"
