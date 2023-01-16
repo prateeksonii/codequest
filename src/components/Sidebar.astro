@@ -1,0 +1,48 @@
+---
+const menu = {
+  learn: {
+    items: [
+      {
+        label: "Getting Started",
+        url: "/dashboard/learn/getting-started",
+      },
+      {
+        label: "Roadmap",
+        url: "/dashboard/learn/roadmap",
+      },
+    ],
+  },
+  practice: {
+    items: [
+      {
+        label: "0 - HTML Basics",
+        url: "/dashboard/practice/0",
+      },
+    ],
+  },
+};
+
+const { items } = Astro.url.pathname.startsWith("/dashboard/learn")
+  ? menu.learn
+  : menu.practice;
+
+const pathname = Astro.url.pathname;
+---
+
+<aside class="min-h-[calc(100vh-4rem)] bg-gray-900">
+  <ul>
+    {
+      items.map((item) => (
+        <li>
+          <a
+            class={`block h-full py-2 px-4 transition-all hover:bg-gray-600 ${pathname === item.url ? "bg-sky-600" : ""}`}
+            href={item.url}
+            // class:list={}
+          >
+            {item.label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</aside>

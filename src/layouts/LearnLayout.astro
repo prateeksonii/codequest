@@ -1,0 +1,16 @@
+---
+type Props = MarkdownLayoutProps<{
+  title: string;
+}>;
+
+import type { MarkdownLayoutProps } from "astro";
+import DashboardLayout from "./DashboardLayout.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<DashboardLayout title={frontmatter.title}>
+  <section class="prose prose-invert max-w-full p-8">
+    <slot />
+  </section>
+</DashboardLayout>

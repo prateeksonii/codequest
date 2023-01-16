@@ -1,0 +1,19 @@
+---
+export interface Props {
+  title: string;
+}
+
+import Nav from "../components/Nav.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Layout from "./Layout.astro";
+
+const { title } = Astro.props;
+---
+
+<Layout title={title}>
+  <Nav />
+  <main class="grid w-full grid-cols-[20%_80%]">
+    <Sidebar />
+    <slot />
+  </main>
+</Layout>
