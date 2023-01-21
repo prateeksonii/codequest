@@ -15,7 +15,7 @@ const menu = {
   practice: {
     items: [
       {
-        label: "0 - HTML Basics",
+        label: "0 - Favorite movies",
         url: "/dashboard/practice/0",
       },
     ],
@@ -24,7 +24,7 @@ const menu = {
 
 const { items } = Astro.url.pathname.startsWith("/dashboard/learn")
   ? menu.learn
-  : menu.practice;
+  : Astro.url.pathname.startsWith("/dashboard/practice") ? menu.practice : { items: []};
 
 const pathname = Astro.url.pathname;
 ---

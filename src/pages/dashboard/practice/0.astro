@@ -1,0 +1,14 @@
+---
+import DashboardLayout from "../../../layouts/DashboardLayout.astro";
+import FavoriteMovies from "../../../components/practice/favorite-movies.md";
+import Editor from "../../../components/html-editor";
+---
+
+<DashboardLayout title="0 - Favorite movies">
+  <div class="grid grid-cols-2">
+    <div class="p-4">
+      <FavoriteMovies />
+    </div>
+    <div class="px-4"><Editor client:load /></div>
+  </div>
+</DashboardLayout>

@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["Inter", ...fontFamily.sans],
+        mono: ["Hack", ...fontFamily.mono],
       },
     },
   },
