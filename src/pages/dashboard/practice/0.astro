@@ -9,6 +9,8 @@ import Editor from "../../../components/html-editor";
     <div class="p-4">
       <FavoriteMovies />
     </div>
-    <div class="px-4"><Editor client:load /></div>
+    <div class="relative">
+      <Editor endpoint="/api/web/favorite-movies" client:load />
+    </div>
   </div>
 </DashboardLayout>
