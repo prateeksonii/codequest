@@ -24,7 +24,7 @@ export const post: APIRoute = async ({ request }) => {
     return throwError("No heading present");
   }
 
-  if (heading !== "Favorite Movies") {
+  if (heading.trim() !== "Favorite Movies") {
     return throwError("Heading text seems different than expected");
   }
 

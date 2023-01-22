@@ -18,6 +18,10 @@ const menu = {
         label: "0 - Favorite movies",
         url: "/dashboard/practice/0",
       },
+      {
+        label: "1 - Favorite movies",
+        url: "/dashboard/practice/0",
+      },
     ],
   },
 };
@@ -37,7 +41,6 @@ const pathname = Astro.url.pathname;
           <a
             class={`block h-full py-2 px-4 transition-all hover:bg-gray-600 ${pathname === item.url ? "bg-sky-600" : ""}`}
             href={item.url}
-            // class:list={}
           >
             {item.label}
           </a>
